@@ -134,3 +134,37 @@ header {
     opacity: 0.8;
     
 }
+.contact{
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.box{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(39, 38, 38);
+    border-radius: 9px;
+}
+.detail_contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding-top: 40px;
+    
+}
+.con_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgb(236, 46, 148);
+    height: 25px;
+    padding: 15px;
+    margin: 15px;
+}
+
