@@ -1,0 +1,23 @@
+/* body{
+    background-color: black;
+    color: white;
+} */
+
+.border{
+    border: 2px solid red;
+    margin: 5px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+
