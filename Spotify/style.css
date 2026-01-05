@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
 *{
     margin: 0;
     padding: 0;
-}.left{
+    font-family: "Atkinson Hyperlegible Mono", sans-serif;
+}
+.left{
     width: 25vw;
     padding: 10px;
 }
@@ -9,13 +12,35 @@
 .right{
     width: 75vw;
 }
-/* .home{
-    
-} */
+
 .home ul li{
     display: flex;
     width: 15px;
     gap: 15px;
     list-style: none;
     padding-top: 14px;
+    font-weight: bold;
+}
+.library{
+    min-height: 70vh;
+    position: relative;
+}
+.heading{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: bold;  
+    padding-top: 14px;
+}
+.heading img{
+    width: 30px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    font-size: 10px;
+    align-items: center;
+    color: grey;
 }
