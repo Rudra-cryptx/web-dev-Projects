@@ -40,10 +40,12 @@
     position: absolute;
     bottom: 0;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     font-size: 10px;
     align-items: center;
     color: grey;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 .right{
     margin: 15px 0px;
@@ -68,12 +70,19 @@
     font-weight: bold;
     font-family: "Roboto", sans-serif;
 }
+.cardscontainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
 
-.spotify_playlist .card{
+.card{
     width: 200px;
     padding: 10px;
     border-radius: 5px;
     background-color: #252525;
+    position: relative;
 }
 
 
@@ -83,4 +92,21 @@
 .card img{
     width: 100%;
     object-fit: contain;
+}
+.play{
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7px;
+    background-color: #1fdf64;
+    position: absolute;
+    top: 165px;
+    right: 20px;
+    opacity: 0;
+    transition: ease-out;
+}
+.play img{
+    width: 30px;
 }
