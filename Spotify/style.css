@@ -49,6 +49,7 @@
 }
 .right{
     margin: 15px 0px;
+    position: relative;
 }
 .header{
     display: flex;
@@ -75,14 +76,20 @@
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
+    overflow: scroll;
+    max-height: 80vh;
 }
+/* .cardscontainer::-webkit-scrollbar{
+    display: none;
+} */
 
 .card{
-    width: 200px;
+    width: 150px;
     padding: 10px;
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+    
 }
 
 
@@ -105,8 +112,60 @@
     top: 165px;
     right: 20px;
     opacity: 0;
-    transition: ease-out;
+    transition: all 1s ease-out;
 }
 .play img{
+    width: 30px;
+}
+.buttons > *{
+    margin: 0 12px;
+}
+.signupbtn{
+    background-color:rgb(38, 38, 38);
+    color: rgb(100, 97, 97);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    
+    font-size: 16px;
+    cursor: pointer;
+}
+.signupbtn:hover{
+    font-size: 17px;
+    color: white;
+}
+.loginbtn{
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.loginbtn:hover{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 18px;
+    
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    background-color: seagreen;
+    padding: 12px;
+}
+
+.songbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.songbutton img{
     width: 30px;
 }
