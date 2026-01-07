@@ -156,7 +156,7 @@
     position: absolute;
     bottom: 0;
     width: 95%;
-    background-color: seagreen;
+    background-color: whitesmoke;
     padding: 12px;
 }
 
@@ -168,4 +168,30 @@
 }
 .songbutton img{
     width: 30px;
+}
+
+.songlist ul{
+    padding: 0 45px;
+}
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 20px;
+    padding: 12px 0;
+    cursor: pointer;
+    padding: 12px 0;
+}
+.songlist ul li img{
+    width: 40px;
+}
+
+
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.playnow span{
+    font-size: 14px;
 }
