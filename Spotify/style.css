@@ -79,20 +79,20 @@
     margin: 30px;
     overflow: scroll;
     max-height: 80vh;
+    
 }
-/* .cardscontainer::-webkit-scrollbar{
+.cardscontainer::-webkit-scrollbar{
     display: none;
-} */
+}
 
 .card{
-    width: 150px;
+    width: 123px;
     padding: 10px;
     border-radius: 5px;
     background-color: #252525;
     position: relative;
     
 }
-
 
 .card > *{
     padding-top: 10px;
@@ -224,16 +224,29 @@
     align-items: center;
 }
 .playbar{
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #d9cfcf;
     height: 40px;
+    
 }
 .seekbar{
     height: 2px;
     width: 98%;
-    border: 2px solid black;
+    background:  black;
     position: absolute;
     bottom: 3px;
     border-radius: 6px;
+    margin: 5px;
     
+    
+}
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
 }
