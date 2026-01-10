@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    
 }
 .left{
     width: 25vw;
@@ -154,10 +155,11 @@
 
 .playbar{
     position: absolute;
-    bottom: 0;
-    width: 95%;
+    bottom: 48px;
+    width: 70vw;
     background-color: whitesmoke;
     padding: 12px;
+    position: fixed
 }
 
 .songbutton{
@@ -169,20 +171,34 @@
 .songbutton img{
     width: 30px;
 }
+.songlist{
+    height: 344px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
+}
+.songlist::-webkit-scrollbar{
+    display: none;
+}
 
 .songlist ul{
-    padding: 0 45px;
+    padding: 0 5px;
 }
 .songlist ul li{
     list-style-type: decimal;
     display: flex;
     gap: 20px;
-    padding: 12px 0;
     cursor: pointer;
-    padding: 12px 0;
+    padding: 13px;
+    border: 1px solid white;
+    margin: 12px 12px;
+    border-radius: 7px;
+    justify-content: space-between;
+    position: relative;
 }
 .songlist ul li img{
     width: 40px;
+    
 }
 
 
@@ -190,8 +206,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 59px;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
 }
 .playnow span{
+    width: 24px;
     font-size: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.playbar{
+    border-radius: 20px;
+    background-color: #d9cfcf;
+    height: 40px;
+}
+.seekbar{
+    height: 2px;
+    width: 98%;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 3px;
+    border-radius: 6px;
+    
 }
