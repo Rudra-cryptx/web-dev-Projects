@@ -6,6 +6,17 @@
     font-family: "Atkinson Hyperlegible Mono", sans-serif;
     
 }
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.logo span {
+    font-size: 22px;
+}
+
 .left{
     width: 25vw;
     padding: 10px;
@@ -183,6 +194,7 @@
 
 .songlist ul{
     padding: 0 5px;
+    
 }
 .songlist ul li{
     list-style-type: decimal;
@@ -195,6 +207,7 @@
     border-radius: 7px;
     justify-content: space-between;
     position: relative;
+    
 }
 .songlist ul li img{
     width: 40px;
@@ -230,14 +243,14 @@
     
 }
 .seekbar{
-    height: 2px;
+    height: 4px;
     width: 98%;
     background:  black;
     position: absolute;
     bottom: 3px;
     border-radius: 6px;
     margin: 5px;
-    
+    cursor: pointer;
     
 }
 .circle{
@@ -246,7 +259,21 @@
     border-radius: 13px;
     background-color: black;
     position: relative;
-    bottom: 6px;
+    bottom: 5px;
     left: 0%;
     transition: left 0.5s;
+}
+
+.songbutton img{
+    cursor: pointer;
+}
+
+.playbar_thing{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.songinfo , .songtime{
+    color: black;
 }
