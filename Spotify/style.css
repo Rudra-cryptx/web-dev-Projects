@@ -15,6 +15,8 @@
 }
 .logo span {
     font-size: 22px;
+    font-weight: bold;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .left{
@@ -239,7 +241,7 @@
 .playbar{
     border-radius: 10px;
     background-color: #d9cfcf;
-    height: 40px;
+    min-height: 40px;
     
 }
 .seekbar{
@@ -276,4 +278,54 @@
 
 .songinfo , .songtime{
     color: black;
+}
+.hamburger{
+    display: none;
+}
+
+.nav{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 12px;
+}
+.close{
+    display: none;
+}
+
+@media (max-width: 1415px) {
+    .left{
+        background-color: black;
+        position: absolute;
+        left: -200%;
+        transition: all 0.8s;
+        z-index: 1;
+        width: 370px;
+    }
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 90vw;
+    }
+
+    .hamburger{
+        display: inline;
+        width: 25px;
+        cursor: pointer;
+    }
+    .seekbar{
+        width: 93%; 
+    }
+    .close{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+    .close img{
+        width: 25px;
+    }
 }
