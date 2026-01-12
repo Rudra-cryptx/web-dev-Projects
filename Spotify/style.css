@@ -84,6 +84,7 @@
     font-size: 25px;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
+    padding: 10px;
 }
 .cardscontainer{
     display: flex;
@@ -274,6 +275,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /*  */
 }
 
 .songinfo , .songtime{
@@ -307,7 +309,7 @@
     }
 
     .playbar{
-        width: 90vw;
+        width: calc(100vw - 60px);
     }
 
     .hamburger{
@@ -316,7 +318,7 @@
         cursor: pointer;
     }
     .seekbar{
-        width: 93%; 
+        width: calc(100vw - 70px); 
     }
     .close{
         display: block;
@@ -327,5 +329,25 @@
     }
     .close img{
         width: 25px;
+    }
+    .cardscontainer{
+        margin: 0;
+        margin-top: 20px ;  
+    }
+    .right{
+        margin: 0;
+    }
+    .playbar_thing{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+}
+@media (max-width: 397px) {
+    .cardscontainer{
+        justify-content: center;
+    }
+    .card{
+        width: 92vw;
     }
 }

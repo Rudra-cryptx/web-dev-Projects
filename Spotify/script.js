@@ -1,15 +1,15 @@
 let currentSong = new Audio();
 
-function sectomin(second){
-    if(isNaN(second)|| second<0){
+function sectomin(second) {
+    if (isNaN(second) || second < 0) {
         return "Invalid input";
     }
 
-    const minuites = Math.floor(second/60);
-    const remainingsec = Math.floor(second%60);
+    const minuites = Math.floor(second / 60);
+    const remainingsec = Math.floor(second % 60);
 
-    const formattedMinuites = String(minuites).padStart(2,'0');
-    const formattedSecond = String(remainingsec).padStart(2,'0');
+    const formattedMinuites = String(minuites).padStart(2, '0');
+    const formattedSecond = String(remainingsec).padStart(2, '0');
 
     return `${formattedMinuites}:${formattedSecond}`;
 
@@ -32,9 +32,9 @@ async function getSongs() {
     return songs;
 }
 
-const playmusic = (track , pause = false)=>{
-    
-    currentSong.src = "/Songs/" + track +".mp3";
+const playmusic = (track, pause = false) => {
+
+    currentSong.src = "/Songs/" + track + ".mp3";
     currentSong.play()
     play.src = "pause.svg"
     document.querySelector(".songinfo").innerHTML = track
@@ -45,7 +45,7 @@ async function main() {
 
     let songs = await getSongs();
 
-    
+
 
     let songUl = document.querySelector(".songlist").getElementsByTagName("ul")[0]
 
@@ -61,45 +61,58 @@ async function main() {
         </li>`;
     }
 
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e=>{
-        e.addEventListener("click", element=>{
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
             console.log(e.querySelector(".s_name ").innerHTML);
             playmusic(e.querySelector(".s_name ").innerHTML.trim());
         })
     })
 
 
-    play.addEventListener("click" , ()=>{
-        if(currentSong.paused){
+    play.addEventListener("click", () => {
+        if (currentSong.paused) {
             currentSong.play()
             play.src = "pause.svg"
         }
-        else{
+        else {
             currentSong.pause()
             play.src = "plays.svg"
         }
     })
 
-    currentSong.addEventListener("timeupdate" , ()=>{
-        console.log(currentSong.currentTime , currentSong.duration);
+    currentSong.addEventListener("timeupdate", () => {
+        console.log(currentSong.currentTime, currentSong.duration);
         document.querySelector(".songtime").innerHTML = `
-        ${sectomin(currentSong.currentTime)}/${sectomin(currentSong.duration)}`;
-        document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration)*100 + "%";
+        ${sectomin(currentSong.currentTime)} / ${sectomin(currentSong.duration)}`;
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
     })
 
-    document.querySelector(".seekbar").addEventListener("click" , e=>{
-        let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100
+    document.querySelector(".seekbar").addEventListener("click", e => {
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
         document.querySelector(".circle").style.left = percent + "%";
-        currentSong.currentTime = ((currentSong.duration)* percent)/100
+        currentSong.currentTime = ((currentSong.duration) * percent) / 100
     })
 
-    document.querySelector(".hamburger").addEventListener("click", ()=>{
+    document.querySelector(".hamburger").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
     })
-    document.querySelector(".close").addEventListener("click", ()=>{
+    document.querySelector(".close").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-200%"
     })
 
+    // this is to close the left in mobile mode by clicking the spotify playlist.
+    document.querySelector(".right .spotify_playlist ").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = "-200%"
+    })
+    
+    previous.addEventListener("click" , ()=>{
+        console.log("Previous clicked")
+        console.log(currentSong)
+    })
+
+    next.addEventListener("click" , ()=>{
+        console.log("next clicked")
+    })
 }
 
 main();
