@@ -1,5 +1,5 @@
 let currentSong = new Audio();
-
+let songUl;
 function sectomin(second) {
     if (isNaN(second) || second < 0) {
         return "Invalid input";
@@ -35,6 +35,7 @@ async function getSongs() {
 const playmusic = (track, pause = false) => {
 
     currentSong.src = "/Songs/" + track + ".mp3";
+    
     currentSong.play()
     play.src = "pause.svg"
     document.querySelector(".songinfo").innerHTML = track
@@ -44,10 +45,7 @@ const playmusic = (track, pause = false) => {
 async function main() {
 
     let songs = await getSongs();
-
-
-
-    let songUl = document.querySelector(".songlist").getElementsByTagName("ul")[0]
+    songUl = document.querySelector(".songlist").getElementsByTagName("ul")[0]
 
     for (const song of songs) {
         songUl.innerHTML = songUl.innerHTML + `<li>
@@ -91,6 +89,7 @@ async function main() {
         let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100
         document.querySelector(".circle").style.left = percent + "%";
         currentSong.currentTime = ((currentSong.duration) * percent) / 100
+        
     })
 
     document.querySelector(".hamburger").addEventListener("click", () => {
@@ -112,6 +111,7 @@ async function main() {
 
     next.addEventListener("click" , ()=>{
         console.log("next clicked")
+        console.log()
     })
 }
 
