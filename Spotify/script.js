@@ -113,6 +113,12 @@ async function main() {
         console.log("next clicked")
         console.log()
     })
+
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change" , (e)=>{
+        // console.log(e)
+        currentSong.volume = parseInt(e.target.value)/100
+    })  
+
 }
 
 main();

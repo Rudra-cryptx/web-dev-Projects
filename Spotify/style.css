@@ -345,8 +345,20 @@
 .close {
     display: none;
 }
-.volume:hover::after{
-    content: " sidsnn";
+
+.volume:hover .range{
+    display: block;
+    
+}
+.range{
+    display: none;
+}
+.volume{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
 }
 @media (max-width: 1415px) {
     .left {
@@ -356,6 +368,9 @@
         transition: all 0.8s;
         z-index: 1;
         width: 370px;
+    }
+    .volume{
+        display: none;
     }
 
     .right {
@@ -398,7 +413,7 @@
     }
 
     .playbar_thing {
-        flex-direction: column;
+        
         gap: 10px;
     }
 
@@ -417,6 +432,9 @@
 @media (max-width: 397px) {
     .cardscontainer {
         justify-content: center;
+    }
+    .playbar_thing{
+        flex-direction: column;
     }
 
     .card {
