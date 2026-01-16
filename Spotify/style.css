@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
-
+:root{
+    --a: 0;
+}
 * {
     margin: 0;
     padding: 0;
@@ -119,6 +121,7 @@
     border-radius: 5px;
     background-color: #252525;
     position: relative;
+    transition: all 0.7s ;
 
 }
 
@@ -140,10 +143,15 @@
     padding-bottom: 7px;
     background-color: #1fdf64;
     position: absolute;
-    top: 165px;
-    right: 20px;
-    opacity: 0;
-    transition: all 1s ease-out;
+    top: 94px;
+    right: 15px;
+    opacity: var(--a);
+    transition: all 0.3s ease-in;
+}
+.card:hover{
+    background-color: rgb(66, 61, 61);
+    cursor: pointer;
+    --a:1;
 }
 
 .play img {
