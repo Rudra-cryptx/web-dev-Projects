@@ -352,6 +352,7 @@
 }
 .range{
     display: none;
+    
 }
 .volume{
     display: flex;
@@ -359,6 +360,7 @@
     justify-content: center;
     align-items: center;
     gap: 2px;
+    cursor: pointer;
 }
 @media (max-width: 1415px) {
     .left {
@@ -369,9 +371,7 @@
         z-index: 1;
         width: 370px;
     }
-    .volume{
-        display: none;
-    }
+    
 
     .right {
         width: 100vw;
@@ -422,6 +422,7 @@
         width: auto;
 
     }
+    
 
     .left {
         padding: 0;
@@ -439,6 +440,14 @@
 
     .card {
         width: 92vw;
+    }
+    .volume{
+        display: none;
+    }
+}
+@media (max-width:500px) {
+    .playbar_thing{
+        flex-direction: column;
     }
 }
 
