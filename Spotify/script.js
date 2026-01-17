@@ -16,7 +16,7 @@ function sectomin(second) {
 }
 
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:3000/Songs/")
+    let a = await fetch("http://127.0.0.1:3000/Songs/Karan%20Aujla")
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -34,7 +34,7 @@ async function getSongs() {
 
 const playmusic = (track, pause = false) => {
 
-    currentSong.src = "/Songs/" + track + ".mp3";
+    currentSong.src = "/Songs/Karan%20Aujla/" + track + ".mp3";
     
     currentSong.play()
     play.src = "pause.svg"
@@ -51,7 +51,7 @@ async function main() {
         songUl.innerHTML = songUl.innerHTML + `<li>
         <div class="info">
         <img class=" invert" src="music.svg" alt="">
-        <span class="s_name">${song.replaceAll("%5C", " ").replaceAll("%20", " ").replaceAll(".mp3", "")} </span>   </div>
+        <span class="s_name">${song.replaceAll("%5C", " ").replaceAll("%20", " ").replaceAll(".mp3", "").replaceAll("Karan", " ").replaceAll("Aujla", " ")} </span>   </div>
         <div class="playnow">
             <img class="invert" src="plays.svg" alt="">
             <span>Play  Now</span>
