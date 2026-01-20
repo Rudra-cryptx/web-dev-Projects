@@ -1,0 +1,33 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 1px solid black;
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: silver;
+    flex-direction: column;
+}
+button{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+
+}
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(55, 38, 38);
+    transition: all 0.3s ease-in;
+}
+input{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
