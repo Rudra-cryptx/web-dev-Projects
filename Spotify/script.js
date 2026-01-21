@@ -119,6 +119,11 @@ async function main() {
         currentSong.volume = parseInt(e.target.value)/100
     })  
 
+    // open of login.html
+    document.querySelector(".loginbtn").addEventListener("click" , ()=>{
+        window.location.href = "login.html";
+    })
+
 }
 
 main();
