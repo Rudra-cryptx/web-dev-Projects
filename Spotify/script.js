@@ -124,6 +124,11 @@ async function main() {
         window.location.href = "login.html";
     })
 
+
+    document.querySelector(".loginbtn").addEventListener("click" , ()=>{
+        window.location.href = "Signup.html";
+    })
+
 }
 
 main();
