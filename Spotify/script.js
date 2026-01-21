@@ -129,6 +129,10 @@ async function main() {
         window.location.href = "Signup.html";
     })
 
+    document.querySelector(".Karan_Aujla").addEventListener("click" , ()=>{
+        window.location.href = "Karan_aujla.html"
+    })
+
 }
 
 main();
