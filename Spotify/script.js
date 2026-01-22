@@ -125,7 +125,7 @@ async function main() {
     })
 
 
-    document.querySelector(".loginbtn").addEventListener("click" , ()=>{
+    document.querySelector(".signupbtn").addEventListener("click" , ()=>{
         window.location.href = "Signup.html";
     })
 
